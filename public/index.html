@@ -5,9 +5,92 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <title>NoteHub</title>
   </head>
   <body>
+    <div class="bg-overlay" hidden></div>
+    <header class="header">
+      <img src="images/logo.png" alt="logo">
+    </header>
+
+    <section class="text-heading">
+      <div class="container">
+        <h1 class="page-heading">My Notes</h1>
+        <div class="heading-right">
+          <button class="add-note-btn"><i class="fas fa-plus"></i>Add New</button>
+          <button class="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+      </div>
+    </section>
+    
+    <section class="search-section" hidden>
+      <div class="container">
+        <label for="input-search">Search for Notes</label>
+        <input type="text" id="input-search" class="input-search" placeholder="Search for Notes">
+        <button type="submit" class="submit-btn">Search</button>
+      </div>
+    </section>
+    
+    <section class="add-note" hidden>
+      <div class="container">
+        <label for="note-title-input">Note title</label>
+        <input type="text" id="note-title-input" class="note-title-input" placeholder="Note title">
+        <textarea name="note-content-area" id="note-content-area" class="note-content-area" placeholder="Note" cols="30" rows="10"></textarea>
+        <select class="note-select-category">
+          <option>-- Select Category --</option>
+          <option>Personal</option>
+          <option>Sport</option>
+          <option>Education</option>
+          <option>Work</option>
+          <option>Important</option>
+        </select>
+        <div class="add-note-btns">
+          <button type="submit" class="submit-btn">Add</button>
+          <button type="submit" class="cancel-btn">Cancel</button>
+        </div>
+      </div>
+    </section>
+
+    <main class="output-container">
+      <div class="notes">
+        <div class="note">
+          <span class="note-date">10.08</span>
+          <h3 class="note-title">NoteTitle</h3>
+          <p class="note-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at nisi leo.</p>
+          <span class="note-category">Work</span>
+        </div>
+
+        <div class="note">
+          <span class="note-date">10.08</span>
+          <h3 class="note-title">NoteTitle</h3>
+          <p class="note-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at nisi leo.</p>
+          <span class="note-category">Work</span>
+        </div>
+
+        <div class="note">
+          <span class="note-date">10.08</span>
+          <h3 class="note-title">NoteTitle</h3>
+          <p class="note-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at nisi leo. Praesent eget faucibus eros.</p>
+          <span class="note-category">Work</span>
+        </div>
+
+        <div class="note">
+          <span class="note-date">10.08</span>
+          <h3 class="note-title">NoteTitle</h3>
+          <p class="note-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at nisi leo. Praesent eget faucibus eros. Morbi vulputate faucibus augue.</p>
+          <span class="note-category">Work</span>
+        </div>
+
+        <div class="note">
+          <span class="note-date">10.08</span>
+          <h3 class="note-title">NoteTitle</h3>
+          <p class="note-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at nisi leo.</p>
+          <span class="note-category">Work</span>
+        </div>
+      </div>
+
+    </main>
     <script src="js/dom.js"></script>
   </body>
 </html>
