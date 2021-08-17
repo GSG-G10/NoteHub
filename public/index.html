@@ -9,6 +9,7 @@
     <title>NoteHub</title>
   </head>
   <body>
+    <div class="bg-overlay" hidden></div>
     <header class="header">
       <img src="images/logo.png" alt="logo">
     </header>
@@ -35,8 +36,11 @@
       <div class="container">
         <label for="note-title-input">Note title</label>
         <input type="text" id="note-title-input" class="note-title-input" placeholder="Note title">
-        <textarea name="note-content" id="note-content" class="note-content" placeholder="Note" cols="30" rows="10"></textarea>
-        <button type="submit" class="submit-btn">Add</button>
+        <textarea name="note-content-area" id="note-content-area" class="note-content-area" placeholder="Note" cols="30" rows="10"></textarea>
+        <div class="add-note-btns">
+          <button type="submit" class="submit-btn">Add</button>
+          <button type="submit" class="cancel-btn">Cancel</button>
+        </div>
       </div>
     </section>
 
