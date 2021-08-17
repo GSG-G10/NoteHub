@@ -8,6 +8,32 @@
     <title>NoteHub</title>
   </head>
   <body>
+    <header class="header">
+      <img src="" alt="logo">
+    </header>
+    <section class="text-heading">
+      <div class="container">
+        <h1 class="page-heading">My Notes</h1>
+      </div>
+    </section>
+    <section class="search-section">
+      <div class="container">
+        <label for="input-search">Search for Jobs</label>
+        <input type="text" id="input-search" class="input-search" placeholder="Search for Jobs  (e.g. teacher, front-end developer, etc.)">
+        <button type="submit" class="submit-btn">Search</button>
+      </div>
+    </section>
+    
+    <section class="add-note">
+      <div class="container">
+        <label for="note-title-input">Note title</label>
+        <input type="text" id="note-title-input" class="note-title-input" placeholder="Note title">
+        <textarea name="note-content" id="note-content" class="note-content" placeholder="Note" cols="30" rows="10"></textarea>
+        <button type="submit" class="submit-btn">Add</button>
+      </div>
+    </section>
+
+    <main class="output-container"></main>
     <script src="js/dom.js"></script>
   </body>
 </html>
