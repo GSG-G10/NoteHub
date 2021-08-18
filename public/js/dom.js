@@ -28,12 +28,12 @@ const createElement = (tagName, className, parentNode, textContent) => {
   elementName.textContent = textContent;
   return elementName;
 };
+const notesContainer = createElement('div', 'notes', outputContainer);
 
 fetch('/showNotes')
   .then((result) => result.json())
   .then((notes) => {
     notes.forEach((note) => {
-      const notesContainer = createElement('div', 'notes', outputContainer);
       const noteCard = createElement('div', 'note', notesContainer);
       const noteTitle = createElement('h3', 'note-title', noteCard, note.title);
       const noteContent = createElement('p', 'note-content', noteCard, note.content);
