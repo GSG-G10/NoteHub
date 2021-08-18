@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
-    "test": "jest",
-    "dev": "nodemon src/index.js"
+    "start": "NODE_ENV = production node src/index.js",
+    "test": "NODE_ENV = test jest",
+    "dev": "NODE_ENV = development nodemon src/index.js"
   },
   "repository": {
     "type": "git",
@@ -29,6 +29,7 @@
   "dependencies": {
     "compression": "^1.7.4",
     "env2": "^2.2.2",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "pg": "^8.7.1"
   }
 }
