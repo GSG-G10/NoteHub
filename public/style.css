@@ -139,6 +139,10 @@ input:focus-visible, textarea:focus-visible, select:focus-visible {
     font-weight: bold;
     color: #ffffffa3;
 }
+.note-content {
+    overflow-wrap: break-word;
+    min-width: 120px;
+}
 .note-title {
     margin-bottom: 7px;
 }
