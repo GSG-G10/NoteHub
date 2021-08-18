@@ -34,63 +34,27 @@
     
     <section class="add-note" hidden>
       <div class="container">
-        <label for="note-title-input">Note title</label>
-        <input type="text" id="note-title-input" class="note-title-input" placeholder="Note title">
-        <textarea name="note-content-area" id="note-content-area" class="note-content-area" placeholder="Note" cols="30" rows="10"></textarea>
-        <select class="note-select-category">
-          <option>-- Select Category --</option>
-          <option>Personal</option>
-          <option>Sport</option>
-          <option>Education</option>
-          <option>Work</option>
-          <option>Important</option>
-        </select>
-        <div class="add-note-btns">
-          <button type="submit" class="submit-btn">Add</button>
-          <button type="submit" class="cancel-btn">Cancel</button>
-        </div>
+        <form action="/addNote" method="POST" id="add-note-form">
+          <label for="note-title-input">Note title</label>
+          <input type="text" id="note-title-input" name="title" class="note-title-input" placeholder="Note title">
+          <textarea name="note-content-area" id="note-content-area" name="content" class="note-content-area" placeholder="Note" cols="30" rows="10"></textarea>
+          <select class="note-select-category" name="categoty_id">
+            <option>-- Select Category --</option>
+            <option value="5">Personal</option>
+            <option value="2">Sport</option>
+            <option value="3">Education</option>
+            <option value="1">Work</option>
+            <option value="4">Important</option>
+          </select>
+          <div class="add-note-btns">
+            <button type="submit" class="submit-btn">Add</button>
+            <button type="button" class="cancel-btn">Cancel</button>
+          </div>
+        </form>
       </div>
     </section>
 
-    <main class="output-container">
-      <div class="notes">
-        <div class="note">
-          <span class="note-date">10.08</span>
-          <h3 class="note-title">NoteTitle</h3>
-          <p class="note-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at nisi leo.</p>
-          <span class="note-category">Work</span>
-        </div>
-
-        <div class="note">
-          <span class="note-date">10.08</span>
-          <h3 class="note-title">NoteTitle</h3>
-          <p class="note-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at nisi leo.</p>
-          <span class="note-category">Work</span>
-        </div>
-
-        <div class="note">
-          <span class="note-date">10.08</span>
-          <h3 class="note-title">NoteTitle</h3>
-          <p class="note-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at nisi leo. Praesent eget faucibus eros.</p>
-          <span class="note-category">Work</span>
-        </div>
-
-        <div class="note">
-          <span class="note-date">10.08</span>
-          <h3 class="note-title">NoteTitle</h3>
-          <p class="note-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at nisi leo. Praesent eget faucibus eros. Morbi vulputate faucibus augue.</p>
-          <span class="note-category">Work</span>
-        </div>
-
-        <div class="note">
-          <span class="note-date">10.08</span>
-          <h3 class="note-title">NoteTitle</h3>
-          <p class="note-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at nisi leo.</p>
-          <span class="note-category">Work</span>
-        </div>
-      </div>
-
-    </main>
+    <main class="output-container"></main>
     <script src="js/dom.js"></script>
   </body>
 </html>

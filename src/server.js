@@ -4,7 +4,7 @@ const compression = require('compression');
 const router = require('./controllers');
 
 const app = express();
-
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(compression());
 app.disable('x-powered-by');
