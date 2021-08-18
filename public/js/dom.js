@@ -42,13 +42,19 @@ fetch('/showNotes')
     });
   });
 
-addNoteForm.addEventListener('submit', () => {
-  fetch('/addNote', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    // eslint-disable-next-line max-len
-    body: JSON.stringify({ title: noteTTitleInput.value, content: noteContentArea.value, category_id: noteSelectCategory.value }),
-  })
-    // eslint-disable-next-line no-restricted-globals
-    .then(() => location.reload());
+addNoteForm.addEventListener('submit', (e) => {
+  if (noteTTitleInput.value === '' || noteContentArea.value === '') {
+    e.preventDefault();
+
+    console.log('error');
+  } else {
+    fetch('/addNote', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      // eslint-disable-next-line max-len
+      body: JSON.stringify({ title: noteTTitleInput.value, content: noteContentArea.value, category_id: noteSelectCategory.value }),
+    })
+      // eslint-disable-next-line no-restricted-globals
+      .then(() => location.reload());
+  }
 });
