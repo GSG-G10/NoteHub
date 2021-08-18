@@ -26,7 +26,7 @@ switch (NODE_ENV) {
 
 const option = {
   connectionString: dbURL,
-  ssl: false,
+  ssl: true,
 };
 
 module.exports = new Pool(option);
