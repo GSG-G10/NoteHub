@@ -135,9 +135,9 @@ input:focus-visible, textarea:focus-visible, select:focus-visible {
     border-radius: 22px;
 }
 .note-date {
-    font-size: 20px;
+    font-size: 14px;
     font-weight: bold;
-    display: none;
+    color: #ffffffa3;
 }
 .note-title {
     margin-bottom: 7px;
