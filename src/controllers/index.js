@@ -1,11 +1,10 @@
 const express = require('express');
+const displayData = require('./displayData');
 
 const router = express.Router();
 const { errorNotFound, errorServer } = require('./errors');
-// For test router
-router.get('/test', (req, res) => {
-  res.send('test server');
-});
+
+router.get('/showNotes', displayData);
 router.use(errorNotFound);
 router.use(errorServer);
 
