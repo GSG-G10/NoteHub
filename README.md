@@ -1,5 +1,5 @@
 # NoteHub :notebook_with_decorative_cover:	
-### [Click here](https://note--hub.herokuapp.com/) to go live Demo
+### [Click here](https://note---hub.herokuapp.com/) to go live Demo
 
 #### NoteHub Helps keep your notes and tasks organized and in one place, and you can return to them at any time.
 
